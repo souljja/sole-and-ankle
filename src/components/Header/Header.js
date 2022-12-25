@@ -4,6 +4,7 @@ import styled from 'styled-components/macro';
 import { COLORS, WEIGHTS } from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
+import Spacer from "../Spacer";
 
 const Header = () => {
   // Our site features two visual headers, but they should be
@@ -21,17 +22,34 @@ const Header = () => {
           <NavLink href="/kids">Kids</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
+        <StyledSpacer size={138} axis="horizontal"/>
       </MainHeader>
     </header>
   );
 };
 
 const MainHeader = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
   padding: 0 32px;
   border-bottom: 1px solid ${COLORS.gray[300]};
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 25px 0;
+`;
+
+const StyledSpacer = styled(Spacer)`
+  min-width: 0;
+`;
 
 const NavLink = styled.a`
   font-size: 1.125rem;

@@ -16,3 +16,8 @@ export const WEIGHTS = {
   medium: 600,
   bold: 800,
 };
+
+export const LABELS = {
+  'on-sale': "Sale",
+  'new-release': "Just Released!"
+}
